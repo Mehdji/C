@@ -15,9 +15,6 @@ Should n be a variable or a symbolic parameter?
 
 
 
-
-/*print the longest input line*/
-
 int main(){
     int i =0,c=0;
     
@@ -30,10 +27,13 @@ int main(){
         
         if(c == '\t'){ //if there is a tabulation in the input change by number need of space to go to next tab stop
             for(int j = TAB - (i % TAB); j>0; j--){ //use modulo operator to find how many spaces are needed
-                putchar('_');
-                
+                putchar(' ');
+                i++;
             }
             
+            
+        }else if(c=='\n'){
+            putchar(c);
             i=0;
         }else{
             
