@@ -28,21 +28,21 @@ int main(int argc, char const *argv[])
                     putchar('\t');
 
                 }
-            }
-             
-        }else if(i%TAB != 0){
-            
-            for(tab_count = i/TAB;tab_count>0;tab_count--){
+            }else{
+                    for(tab_count = i/TAB;tab_count>0;tab_count--){
                     putchar('\t');
 
                 }
 
-            for(space_count = TAB - (i%TAB);space_count>0;space_count--){
+            for(space_count = i%TAB;space_count>0;space_count--){
                     putchar(' ');
 
                 }
-                putchar('\n');
+                putchar(c);
                 i =0;
+
+                }
+             
         }
     }
 
